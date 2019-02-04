@@ -6,6 +6,7 @@ MAINTAINER netwerkbeheer <netwerkbeheer@staedion.nl>
 RUN apt-get update \
     && apt-get -y install lighttpd wget \
     && cd / && wget -N https://raw.githubusercontent.com/stdnwbeheer/lighttp/master/deps/docker-entrypoint.sh -P / \
+    && cd / && chown root:root docker-entrypoint.sh && chmod +x docker-entrypoint.sh \
     && apt-get -y purge wget \
     && apt-get -y autoremove \
     && apt-get -y autoclean \
