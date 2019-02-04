@@ -5,12 +5,12 @@ MAINTAINER netwerkbeheer <netwerkbeheer@staedion.nl>
 # Run the installation
 RUN apt-get update \
     && apt-get -y install lighttpd wget \
-    && cd / && wget -N http... \
+    && cd / && wget -N https://raw.githubusercontent.com/stdnwbeheer/lighttp/master/deps/docker-entrypoint.sh -P / \
     && apt-get -y purge wget \
     && apt-get -y autoremove \
     && apt-get -y autoclean \
     && apt-get -y clean
-# Expose port 80 to the host.    
+# Expose port 80 to the host.
 EXPOSE 80
 # Set the entrypoint script.
 ENTRYPOINT ["docker-entrypoint.sh"]
