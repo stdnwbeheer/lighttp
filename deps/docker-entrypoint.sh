@@ -3,14 +3,14 @@
 #Stop container procedure
 cleanup() {
     echo "Container stopped, performing cleanup..."
-    systemctl stop lighttp
+    /etc/init.d/lighttpd stop
 }
 
 #Trap SIGTERM
 trap 'cleanup' SIGTERM
 
 #Start container procedure
-systemctl start lighttp
+/etc/init.d/lighttpd start
 tail -f /dev/null &
 
 #Wait
