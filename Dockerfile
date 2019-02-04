@@ -14,4 +14,4 @@ RUN apt-get update \
 # Expose port 80 to the host.
 EXPOSE 80
 # Set the entrypoint script.
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
