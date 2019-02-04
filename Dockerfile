@@ -1,5 +1,5 @@
 # Use Ubuntu 18.04 as base image.
-FROM UBUNTU:18.04
+FROM ubuntu:18.04
 # Maintainer of the Dockerfile
 MAINTAINER netwerkbeheer <netwerkbeheer@staedion.nl>
 # Run the installation
