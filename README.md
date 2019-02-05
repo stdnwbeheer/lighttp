@@ -1,4 +1,4 @@
-# Simple Lighttp DockerFile
+# Simple Lighttpd DockerFile
 Simple lighttpd server Ubuntu 18.04 based dockerfile.
 
 # Usage:
